@@ -22,6 +22,7 @@ Features
 -  Auto language detection
 -  Bulk translations
 -  Customizable service URL
+-  Connection pooling (the advantage of using requests.Session)
 -  HTTP/2 support
 
 TODO
@@ -35,7 +36,11 @@ more features are coming soon.
 HTTP/2 support
 ~~~~~~~~~~~~~~
 
-This library uses httpx for HTTP requests so HTTP/2 is supported by default.
+This is a great deal for everyone! (up to 2x times faster in my test) If
+you want to get googletrans faster you should install
+`hyper <https://github.com/Lukasa/hyper>`__ package. Googletrans will
+automatically detect if hyper is installed and if so, it will be used
+for http networking.
 
 How does this library work
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -59,7 +64,8 @@ Installation
 
 To install, either use things like pip with the package "googletrans"
 or download the package and put the "googletrans" directory into your
-python path.
+python path. Anyway, it is noteworthy that, this just requires two
+modules: requests and future.
 
 .. code:: bash
 
